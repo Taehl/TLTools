@@ -1,7 +1,7 @@
 -- Taehl's serializer v1
 
 -- Usage: loadstring("tablename="..Tserialize(table))
-function Tserialize(t)
+function TSerialize(t)
 	assert(type(t) == "table", "Can only Tserialize tables.")
 	if not t then return nil end
 	local s = "{"
