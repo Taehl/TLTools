@@ -1,8 +1,17 @@
 require "Tserial"
 
-test = {key = "hello world!"}
+test1 =
+		{
+			hello = "world!",
+			1, "love",
+			key = "value",
+			true, true, ["false"] = "true",
+			{inner = "table"}
+		}
 
-serial = TSerialize(test)
+serial1 = TSerialize(test1)
+print(serial1)
 
-print(serial)
-
+loadstring("test2="..serial1)()
+serial2 = TSerialize(test2)
+print(serial2)
